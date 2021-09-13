@@ -10,4 +10,19 @@ Guestshell provides the environment for the Python script to run. Using this mod
 
 Incase if DHCP server is configured for PnP process, after receiving DHCP response the PnP agent process that is running on a Cisco IOS-XE device is initiated.
 In the absence of the startup configuration it attempts to connect the PnP server and the PnP process is continued. In case Zero-Touch Provisioning and PnP fails,
-the device falls back to auto install to load configuration files. 
+the device falls back to auto install to load configuration files.
+
+1)ZTP with HTTP server running on Ubuntu VM
+In the dhcp.conf we have a sample sample DHCP server configuration with HTTPserver details. 
+This server is connected either to the management port or front panel port of a switch. 
+This DHCP server is running on a Linux Ubuntu VM.
+
+2)Enable IOX,GUESTSHELL,VNIC FOR GUESTSHELL
+In the guest-shell file we have a example that show us how to enable iox,vnic,guestshell on a Cisco Iosxe
+
+3)Sample Ztp script.py configuration
+In the ztp.py file configuration we have a simple script at wich configures the follow parameters:
+  Interface,gateway,aaa,netconf-yang
+  
+
+
